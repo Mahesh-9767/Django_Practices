@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue; text-align: center;">Welcome To Django World !</h1>
+    <marquee behavior="" direction="" scrollamount="10">
+        <h2 style="color: rgb(237, 12, 218); text-align: center;">Our Django Batch satrt at:{{date}}</h2>
+    </marquee>
+    <p style="color: red; font-size: 20px; text-align: center">What is Django?
+        Django is a Python framework that makes it easier to create web sites using Python.
+        
+        Django takes care of the difficult stuff so that you can concentrate on building your web applications.
+        
+        Django emphasizes reusability of components, also referred to as DRY (Don't Repeat Yourself), and comes with ready-to-use features like login system, database connection and CRUD operations (Create Read Update Delete).</p>
+
+        <p style="color:purple; font-size: 20px; text-align: center">
+                        How does Django Work?
+            Django follows the MVT design pattern (Model View Template).
+
+            Model - The data you want to present, usually data from a database.
+            View - A request handler that returns the relevant template and content - based on the request from the user.
+            Template - A text file (like an HTML file) containing the layout of the web page, with logic on how to display the data.
+        </p>
+
+        <h3>Student_Details:--></h3>
+        <ol>
+            <h4><li>Name:{{Name}}</li></h4>
+            <h4><li>ID:{{ID}}</li></h4>
+        </ol>
+</body>
+</html>

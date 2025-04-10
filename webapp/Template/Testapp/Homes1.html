@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Today is Thursday...!</h1>
+    <ul>
+        <li><a href="MV/">Movies</a></li>
+        <li><a href="SP/">Sports pages</a></li>
+        <li><a href="PL/">Politics pages</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="{% url 'web1'%}">Movies</a></li>
+        <li><a href="{% url 'web2'%}">Sports pages</a></li>
+        <li><a href="{% url 'web3'%}">Politics pages</a></li>
+    </ul>
+    <img src="{% static 'images/shree_ram.jpg' %}" alt="" style="height: 200px;">
+
+    <h1>Today is Thursday...!</h1>
+</body>
+</html>

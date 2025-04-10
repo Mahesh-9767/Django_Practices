@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/pune.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome Pune Jobs</h1>
+    {% if pj %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Date</th>
+                <th>Email</th>
+                <th>Eligibility</th>
+                <th>Experience</th>
+                <th>Address</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in pj %}
+            <tr>
+                <td>{{ i.company }}</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.elig }}</td>
+                <td>{{ i.exp }}</td>
+                <td>{{ i.add }}</td>
+                <td>{{ i.skills }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% else %}
+    <p>No Jobs Found....</p>
+    {% endif %}
+    <!-- <a class="btn btn-primary" href="{% url 'web3' %}">Pune Jobs</a> -->
+    <a class="btn btn-primary" href="{% url 'web1' %}">Bangalore Jobs</a>
+    <a class="btn btn-primary" href="{% url 'web2' %}">Kolkata Jobs</a>
+</body>
+</html>
+

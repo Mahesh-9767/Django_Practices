@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This Django Movie.</h1>
+    <ul>
+        <li>KGF</li>
+        <li>Sikandar</li>
+        <li>Chaava</li>
+    </ul>
+
+    <img src="{% static 'images/shree_ram.jpg' %}" alt="" style="height: 200px;">
+
+    <ul>
+        <li><a href="{% url 'web1'%}">Movies</a></li>
+        <li><a href="{% url 'web2'%}">Sports pages</a></li>
+        <li><a href="{% url 'web3'%}">Politics pages</a></li>
+    </ul>
+</body>
+</html>

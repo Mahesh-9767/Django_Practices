@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my {{head}} page.</h1>
+    <ul>
+        <li>{{names}}</li>
+        <li>{{names1}}</li>
+        <li>{{names2}}</li>
+        <li>{{names3}}</li>
+    </ul>
+
+
+    <!-- <h1>This is my {{head}} page.</h1>
+    <ul>
+        <li>{{names1}}</li>
+        <li>{{names2}}</li>
+        <li>{{names3}}</li>
+    </ul>
+
+    <h1>This is my {{head}} page.</h1>
+    <ul>
+        <li>{{names1}}</li>
+        <li>{{names2}}</li>
+        <li>{{names3}}</li>
+    </ul> -->
+
+    {% if head == 'sports' %}
+        <img src="{% static 'images/shree_ram.jpg' %}" alt="" style="height: 200px;">
+    {% elif head == 'Movies' %}
+        <img src="{% static 'images/images.jpg' %}" alt="" style="height: 200px;">
+    {% elif head == 'Politics' %}
+        <img src="{% static 'images/images.jpg' %}" alt="" style="height: 200px;">
+    {% endif %}
+
+    <ul>
+        <li><a href="{% url 'web1'%}">Movies</a></li>
+        <li><a href="{% url 'web2'%}">Sports pages</a></li>
+        <li><a href="{% url 'web3'%}">Politics pages</a></li>
+    </ul>
+</body>
+</html>
