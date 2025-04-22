@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends "testapp/perent.html" %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/moviest.css' %}">
+    <title>Movie List</title>
+</head>
+<body>
+    {% block block_child %}
+        {% if data %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Movie Name</th>
+                    <th>Release Date</th>
+                    <th>Hero</th>
+                    <th>Heroine</th>
+                    <th>Director</th>
+                    <th>Language</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in data %}
+                <tr>
+                    <td>{{ movie.id }}</td>
+                    <td>{{ movie.mname }}</td>
+                    <td>{{ movie.rdate }}</td>
+                    <td>{{ movie.hero }}</td>
+                    <td>{{ movie.heroine }}</td>
+                    <td>{{ movie.director }}</td>
+                    <td>{{ movie.lang }}</td>
+                    <td>{{ movie.rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <h1>No Records Found</h1>
+        {% endif %}
+
+        <!-- <a href="{% url 'list' %}" class="btn btn-primary" role="button">List Movies</a> -->
+        <a href="{% url 'add' %}" class="btn btn-primary" role="button">Add Movies</a>
+    {% endblock %}
+</body>
+</html>
