@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello <span>{{ name }} </span></h1>
+    <h3>Please Enter Your Age</h3>
+    <form action="/age/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    
+    <style>
+        span {
+            color: rgba(73, 34, 211, 0.553);
+        }
+    </style>
+</body>
+</html>
+
+
+
